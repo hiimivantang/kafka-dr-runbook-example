@@ -1,8 +1,8 @@
 // Scenario runbook template
-:scenario-id: ${scenario-id}
-:category: ${category}
-:name: ${name}
-:description: ${description}
+:scenario-id: DC1
+:category: Single DC failure
+:name: Full datacenter failure
+:description: Full datacenter (e.g. disaster, power outage, DC switch failure) outage
 
 === {scenario-id} {name}
 _{category}_

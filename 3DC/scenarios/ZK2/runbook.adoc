@@ -1,8 +1,8 @@
 // Scenario runbook template
-:scenario-id: ${scenario-id}
-:category: ${category}
-:name: ${name}
-:description: ${description}
+:scenario-id: ZK2
+:category: Two nodes failure
+:name: ZooKeeper Outage
+:description: Two ZooKeeper instances within a DC go offline.
 
 === {scenario-id} {name}
 _{category}_

@@ -1,8 +1,8 @@
 // Scenario runbook template
-:scenario-id: ${scenario-id}
-:category: ${category}
-:name: ${name}
-:description: ${description}
+:scenario-id: ZK1
+:category: Single node failure
+:name: Zookeeper Outage
+:description: One ZooKeeper goes offline. Server breaks or maintenance restart
 
 === {scenario-id} {name}
 _{category}_

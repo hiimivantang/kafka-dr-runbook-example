@@ -1,8 +1,8 @@
 // Scenario runbook template
-:scenario-id: ${scenario-id}
-:category: ${category}
-:name: ${name}
-:description: ${description}
+:scenario-id: KD1
+:category: Single node failure
+:name: Kafka Disk Failure
+:description: Single disk failure. SAN storage with redundancy guarantee.
 
 === {scenario-id} {name}
 _{category}_

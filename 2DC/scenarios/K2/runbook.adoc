@@ -1,8 +1,8 @@
 // Scenario runbook template
-:scenario-id: ${scenario-id}
-:category: ${category}
-:name: ${name}
-:description: ${description}
+:scenario-id: K2
+:category: Two nodes failure
+:name: Kafka Outage
+:description: Two broker servers within a DC go offline. Server breaks or human error during maintenance.
 
 === {scenario-id} {name}
 _{category}_

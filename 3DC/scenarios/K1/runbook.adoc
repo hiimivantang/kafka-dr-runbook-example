@@ -1,8 +1,8 @@
 // Scenario runbook template
-:scenario-id: ${scenario-id}
-:category: ${category}
-:name: ${name}
-:description: ${description}
+:scenario-id: K1
+:category: Single node failure
+:name: Kafka Outage
+:description: One Kafka server goes offline. Server breaks or maintenance restart
 
 === {scenario-id} {name}
 _{category}_

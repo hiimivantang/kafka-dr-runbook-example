@@ -1,8 +1,8 @@
 // Scenario runbook template
-:scenario-id: ${scenario-id}
-:category: ${category}
-:name: ${name}
-:description: ${description}
+:scenario-id: R1
+:category: Single region failure
+:name: Full regional failure
+:description: Full regional (e.g. disaster, power outage, catastrophic network issue) outage resulting in both DCs within the region to be offline.
 
 === {scenario-id} {name}
 _{category}_

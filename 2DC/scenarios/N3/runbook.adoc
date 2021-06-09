@@ -1,8 +1,8 @@
 // Scenario runbook template
-:scenario-id: ${scenario-id}
-:category: ${category}
-:name: ${name}
-:description: ${description}
+:scenario-id: N3
+:category: Inter-region network segmentation
+:name: Network segmentation between Regions
+:description: Network segmentation between regions, resulting in loss of connectivity between the (stretched) cluster in each region.
 
 === {scenario-id} {name}
 _{category}_
