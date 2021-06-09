@@ -1,0 +1,33 @@
+// Scenario runbook template
+:scenario-id: ${scenario-id}
+:scenario-name: ${scenario-name}
+:category: ${category}
+:name: ${name}
+:description: ${description}
+
+=== {scenario-id} {scenario-name}
+_{category}_
+
+==== Description 
+
+{description}
+
+==== Cause
+
+//TODO: List possible cause(s) for this scenario
+
+==== Failover steps
+
+////
+This section articulates the action required to failover affected components, if any.
+
+TODO: Update the explicit steps, complete with commands or relevant references, to successfully failover and resume business operations 
+////
+
+==== Failback steps
+
+////
+This section articulates the action required to failback, i.e. recovery back to normal state when outage is resolved.
+
+TODO: Update the explicit steps, complete with commands or relevant references, to successfully failback and recover back to normal state of operation.
+////
