@@ -4,7 +4,7 @@
 :name: Network segmentation between Regions
 :description: Network segmentation between regions, resulting in loss of connectivity between the (stretched) cluster in each region.
 
-=== {scenario-id} {name}
+=== {scenario-id}: {name}
 _{category}_
 
 ==== Description 

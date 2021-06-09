@@ -4,7 +4,7 @@
 :name: Full datacenter failure
 :description: Full datacenter (e.g. disaster, power outage, DC switch failure) outage
 
-=== {scenario-id} {name}
+=== {scenario-id}: {name}
 _{category}_
 
 ==== Description 

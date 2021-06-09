@@ -4,7 +4,7 @@
 :name: Zookeeper Outage
 :description: One ZooKeeper goes offline. Server breaks or maintenance restart
 
-=== {scenario-id} {name}
+=== {scenario-id}: {name}
 _{category}_
 
 ==== Description 

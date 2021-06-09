@@ -4,7 +4,7 @@
 :name: Kafka Outage
 :description: Two broker servers within a DC go offline. Server breaks or human error during maintenance.
 
-=== {scenario-id} {name}
+=== {scenario-id}: {name}
 _{category}_
 
 ==== Description 

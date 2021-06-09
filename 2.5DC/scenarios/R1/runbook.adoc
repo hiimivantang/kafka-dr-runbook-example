@@ -4,7 +4,7 @@
 :name: Full regional failure
 :description: Full regional (e.g. disaster, power outage, catastrophic network issue) outage resulting in both DCs within the region to be offline.
 
-=== {scenario-id} {name}
+=== {scenario-id}: {name}
 _{category}_
 
 ==== Description 

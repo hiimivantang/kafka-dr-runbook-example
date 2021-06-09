@@ -4,7 +4,7 @@
 :name: Network segmentation within DC
 :description: Network segmentation within a DC, e.g. rack switch failure, that affects some of the DC's brokers, ZK nodes, SR instance, or C3 instance.
 
-=== {scenario-id} {name}
+=== {scenario-id}: {name}
 _{category}_
 
 ==== Description 

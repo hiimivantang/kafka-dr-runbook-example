@@ -4,7 +4,7 @@
 :name: Kafka Outage
 :description: One Kafka server goes offline. Server breaks or maintenance restart
 
-=== {scenario-id} {name}
+=== {scenario-id}: {name}
 _{category}_
 
 ==== Description 

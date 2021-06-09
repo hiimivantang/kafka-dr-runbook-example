@@ -4,7 +4,7 @@
 :name: ZooKeeper Outage
 :description: Two ZooKeeper instances within a DC go offline.
 
-=== {scenario-id} {name}
+=== {scenario-id}: {name}
 _{category}_
 
 ==== Description 

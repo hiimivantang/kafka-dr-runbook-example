@@ -4,7 +4,7 @@
 :name: Network segmentation between DC
 :description: Network segmentation between 2 DCs, e.g. DC switch failure, affecting entire region.
 
-=== {scenario-id} {name}
+=== {scenario-id}: {name}
 _{category}_
 
 ==== Description 

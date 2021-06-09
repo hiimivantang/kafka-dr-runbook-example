@@ -4,7 +4,7 @@
 :name: Kafka Disk Failure
 :description: Single disk failure. SAN storage with redundancy guarantee.
 
-=== {scenario-id} {name}
+=== {scenario-id}: {name}
 _{category}_
 
 ==== Description 
