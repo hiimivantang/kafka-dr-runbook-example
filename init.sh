@@ -23,6 +23,7 @@ do
         FILE=$i/scenarios/$s/runbook.adoc
         if test -f "$FILE"; then
             echo "$FILE exists."
+            cat __Template_.adoc | sed "s/\${scenario-id}/$s/g; s/\${name}/$name/g; s/\${category}/$category/g; s/\${description}/$description/g" > $i/scenarios/$s/runbook.adoc
         else
             echo "Generating runbook $FILE"
             cat __Template_.adoc | sed "s/\${scenario-id}/$s/g; s/\${name}/$name/g; s/\${category}/$category/g; s/\${description}/$description/g" > $i/scenarios/$s/runbook.adoc

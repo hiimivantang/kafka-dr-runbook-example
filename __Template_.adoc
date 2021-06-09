@@ -4,7 +4,7 @@
 :name: ${name}
 :description: ${description}
 
-=== {scenario-id} {name}
+=== {scenario-id}: {name}
 _{category}_
 
 ==== Description 
