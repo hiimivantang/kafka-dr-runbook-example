@@ -8,7 +8,9 @@
 
 3DC: 2+2+2 Kafka brokers; 2+2+1 ZK
 
+## Playbooks
 
+[2DC DR Playbook](./2DC/playbook.adoc)
 
 ## Scenarios
 | | | | |
