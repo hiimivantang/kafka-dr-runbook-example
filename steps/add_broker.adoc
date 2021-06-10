@@ -1,0 +1,7 @@
+To add a server to your Kafka cluster, assign it a unique broker ID and start up Kafka on your new server. 
+Then, use https://docs.confluent.io/platform/current/kafka/rebalancer/index.html#rebalancer[confluent-rebalancer] tool to assign existing partitions to it.
+
+[source,shell]
+----
+confluent-rebalancer execute --throttle 1000000 --bootstrap-server <hostname>:<port>
+----

@@ -1,0 +1,13 @@
+If your Zookeeper node is running as a service (found under /lib/systemd/system/) from a recent Confluent Platform release, you can start it using:
+
+[source,shell]
+----
+systemctl start confluent-zookeeper
+----
+
+Otherwise, you can start your broker using:
+
+[source,shell]
+----
+bin/zookeeper-server-start.sh config/zookeeper.properties
+----

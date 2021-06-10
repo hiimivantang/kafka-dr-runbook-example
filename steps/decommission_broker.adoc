@@ -1,0 +1,8 @@
+To remove a broker, use `confluent-rebalancer` tool for decommissioning brokers using the `--remove-broker-ids` option. 
+
+[source,shell]
+----
+confluent-rebalancer execute --throttle 1000000 --bootstrap-server <hostname>:<port> --remove-broker-ids <broker.id>
+----
+
+NOTE: The cluster is balanced in the same execution.

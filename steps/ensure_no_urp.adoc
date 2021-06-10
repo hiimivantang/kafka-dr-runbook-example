@@ -1,0 +1,8 @@
+Run the following command to determine if there are any under replicated partitions:
+
+[source,shell]
+----
+kafka-topics --bootstrap-server <hostname>:<port> --describe --under-replicated-partitions
+----
+
+If there are no under replicated partitions, you should get an empty output.

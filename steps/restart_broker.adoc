@@ -1,0 +1,14 @@
+If your Kafka broker is running as a service (found under /lib/systemd/system/) from a recent Confluent Platform release, you can restart it using:
+
+[source,shell]
+----
+systemctl restart confluent-server
+----
+
+Otherwise, you can start your broker using:
+
+[source,shell]
+----
+bin/kafka-server-stop
+bin/kafka-server-start config/server.properties
+----

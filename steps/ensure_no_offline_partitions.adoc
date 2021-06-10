@@ -1,0 +1,8 @@
+Run the following command to determine if there are any offline partitions:
+
+[source,shell]
+----
+kafka-topics --bootstrap-server <hostname>:<port> --describe --unavailable-partitions
+----
+
+If there are no offline partitions, you should get an empty output.
