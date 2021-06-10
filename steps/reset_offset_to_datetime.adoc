@@ -1,0 +1,10 @@
+Ensure target consumer group is currently inactive and not consuming from any topics.
+Then, run the following command to reset the consumer group's offset to read from a specific date and time:
+
+[source,shell]
+----
+kafka-consumer-groups --bootstrap-server <hostname>:<port> --group <consumer_group_name> \
+--reset-offsets --to-datetime <YYYY-MM-DDTHH:mm:SS.sss> --all-topics --execute
+----
+
+TIP: If you intend to reset offsets for a specific topic only, the parameter --topic should be specified.

@@ -1,0 +1,9 @@
+Ensure Replicator is caught up and replication lag is not growing.
+If the replication lag keeps growing, it indicates that Replicator throughput is lower than what gets produced to the origin cluster and that additional Replicator tasks or Connect Workers are necessary.
+
+[TIP]
+====
+The recommended way to monitor Replicator is with Confluent Control Center and the https://docs.confluent.io/platform/current/multi-dc-deployments/replicator/replicator-monitoring.html#crep-monitoring-extension[Replicator monitoring extension]. 
+
+Additionally, Replicator needs to be configured with https://docs.confluent.io/platform/current/control-center/installation/clients.html#confluent-monitoring-interceptors[Confluent Monitoring Interceptors]
+====

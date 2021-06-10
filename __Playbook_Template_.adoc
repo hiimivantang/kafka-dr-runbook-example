@@ -1,0 +1,25 @@
+= {mdc} DR Operational Runbook
+:toc: macro
+:toc-title:
+:toclevels: 3
+:mdc: ${mdc}
+
+toc::[]
+
+include::scenarios/ZK1/runbook.adoc[]
+
+include::scenarios/K1/runbook.adoc[]
+
+include::scenarios/ZK2/runbook.adoc[]
+
+include::scenarios/K2/runbook.adoc[]
+
+include::scenarios/DC1/runbook.adoc[]
+
+include::scenarios/R1/runbook.adoc[]
+
+include::scenarios/N1/runbook.adoc[]
+
+include::scenarios/N2/runbook.adoc[]
+
+include::scenarios/N3/runbook.adoc[]
