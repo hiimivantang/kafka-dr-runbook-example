@@ -4,18 +4,13 @@
 :name: Full regional failure
 :description: Full regional (e.g. disaster, power outage, catastrophic network issue) outage resulting in both DCs within the region to be offline.
 
-=== {scenario-id}: {name}
-_{category}_
+== {scenario-id}: {name} ({category})
 
-==== Description 
+=== Description 
 
 {description}
 
-==== Cause
-
-//TODO: List possible cause(s) for this scenario
-
-==== Failover steps
+=== Failover steps to degraded state
 
 ////
 This section articulates the action required to failover affected components, if any.
@@ -23,10 +18,10 @@ This section articulates the action required to failover affected components, if
 TODO: Update the explicit steps, complete with commands or relevant references, to successfully failover and resume business operations 
 ////
 
-==== Failback steps
+=== Recovery steps to normal state
 
 ////
-This section articulates the action required to failback, i.e. recovery back to normal state when outage is resolved.
+This section articulates the action required to recover and/or failback, i.e. recovery back to normal state when outage is resolved.
 
 TODO: Update the explicit steps, complete with commands or relevant references, to successfully failback and recover back to normal state of operation.
 ////

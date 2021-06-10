@@ -4,29 +4,25 @@
 :name: Zookeeper Outage
 :description: One ZooKeeper goes offline. Server breaks or maintenance restart
 
-=== {scenario-id}: {name}
-_{category}_
+== {scenario-id}: {name} ({category})
 
-==== Description 
+=== Description 
 
 {description}
 
-==== Cause
+=== Failover steps to degraded state
 
-//TODO: List possible cause(s) for this scenario
+Not required. Zookeeper hierarchical quorum is still online.
 
-==== Failover steps
+=== Recovery steps to normal state
 
-////
-This section articulates the action required to failover affected components, if any.
+. Reset/replace offline node.
+. Start Zookeeper node.
++
+====
+include::../../../steps/start_zookeeper.adoc[]
 
-TODO: Update the explicit steps, complete with commands or relevant references, to successfully failover and resume business operations 
-////
+[NOTE]
+No reconfiguration is required as Zookeeper node will rejoin quorum.
+====
 
-==== Failback steps
-
-////
-This section articulates the action required to failback, i.e. recovery back to normal state when outage is resolved.
-
-TODO: Update the explicit steps, complete with commands or relevant references, to successfully failback and recover back to normal state of operation.
-////
