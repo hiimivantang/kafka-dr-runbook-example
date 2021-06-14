@@ -5,9 +5,18 @@ If your Zookeeper node is running as a service (found under /lib/systemd/system/
 systemctl start confluent-zookeeper
 ----
 
-Otherwise, you can start your broker using:
+Otherwise, you can start Zookeeper server with:
 
 [source,shell]
 ----
 bin/zookeeper-server-start.sh config/zookeeper.properties
 ----
+
+To validate if your server has successfully joined the quorum, run the following and verify if `Mode` is either `follower` or `leader`:
+
+[source,shell]
+----
+echo stat | nc localhost 2181  | grep Mode
+---- 
+
+TIP: If `stat` command is disabled, enable it by including it in the `4lw.commands.whitelist` property within `zookeeper.properties`.

@@ -5,4 +5,4 @@ Run the following command to determine if there are any offline partitions:
 kafka-topics --bootstrap-server <hostname>:<port> --describe --unavailable-partitions
 ----
 
-If there are no offline partitions, you should get an empty output.
+CAUTION: If there are any offline partitions, Kafka clients that produce/consume to/from those partitions will be impacted.

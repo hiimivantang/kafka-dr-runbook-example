@@ -18,11 +18,9 @@ Not required. Zookeeper hierarchical quorum is still online.
 
 . Reset/replace offline node.
 . Start Zookeeper node.
+No reconfiguration is required as Zookeeper node will rejoin quorum.
 +
 ====
 include::../../../steps/start_zookeeper.adoc[]
-
-[NOTE]
-No reconfiguration is required as Zookeeper node will rejoin quorum.
 ====
 
