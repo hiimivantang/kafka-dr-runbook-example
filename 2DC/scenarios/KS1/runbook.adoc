@@ -1,0 +1,27 @@
+// Scenario runbook template
+:scenario-id: KS1
+:category: Single node failure
+:name: Kafka Streams Application failure
+:description: One Kafka Streams application instance failure resulting in tasks running in failed instance to be reassigned to other instances (if any).
+
+== {scenario-id}: {name} ({category})
+
+=== Description 
+
+{description}
+
+=== Failover steps to degraded state
+
+////
+This section articulates the action required to failover affected components, if any.
+
+TODO: Update the explicit steps, complete with commands or relevant references, to successfully failover and resume business operations 
+////
+
+=== Recovery steps to normal state
+
+////
+This section articulates the action required to recover and/or failback, i.e. recovery back to normal state when outage is resolved.
+
+TODO: Update the explicit steps, complete with commands or relevant references, to successfully failback and recover back to normal state of operation.
+////

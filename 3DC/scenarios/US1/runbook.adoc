@@ -1,0 +1,27 @@
+// Scenario runbook template
+:scenario-id: US1
+:category: Complete upstream failure
+:name: Channel failure
+:description: A complete failure for upstream system resulting in the inability for Producers to pull and produce into Kafka topics.
+
+== {scenario-id}: {name} ({category})
+
+=== Description 
+
+{description}
+
+=== Failover steps to degraded state
+
+////
+This section articulates the action required to failover affected components, if any.
+
+TODO: Update the explicit steps, complete with commands or relevant references, to successfully failover and resume business operations 
+////
+
+=== Recovery steps to normal state
+
+////
+This section articulates the action required to recover and/or failback, i.e. recovery back to normal state when outage is resolved.
+
+TODO: Update the explicit steps, complete with commands or relevant references, to successfully failback and recover back to normal state of operation.
+////
