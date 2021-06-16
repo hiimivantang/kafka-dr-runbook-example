@@ -9,3 +9,8 @@ R1	Single region failure	Full regional failure	Full regional (e.g. disaster, pow
 N1	Intra-DC network failure	Network segmentation within DC	Network segmentation within a DC, e.g. rack switch failure, that affects some of the DC's brokers, ZK nodes, SR instance, or C3 instance.
 N2	Inter-DC network segmentation	Network segmentation between DC	Network segmentation between 2 DCs, e.g. DC switch failure, affecting entire region.
 N3	Inter-region network segmentation	Network segmentation between Regions	Network segmentation between regions, resulting in loss of connectivity between the (stretched) cluster in each region.
+KS1	Single node failure	Kafka Streams Application failure	One Kafka Streams application instance failure resulting in tasks running in failed instance to be reassigned to other instances (if any).
+US1	Complete upstream failure	Channel failure	A complete failure for upstream system resulting in the inability for Producers to pull and produce into Kafka topics.
+DS1	Complete downstream failure	Channel failure	A complete failure for downstream system resulting in the inability for downstream Consumers to sink processed events.
+Q1	Partial downstream failure	Channel failure	A partial failure for downstream (for e.g. full queue) resulting in the inability for downstream Consumer to sink some of the processed events.
+CW1	Single node failure	Connect worker failure	One connect worker failure resulting in tasks running in the failed worker to be reassigned to remaining workers (if any).
