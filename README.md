@@ -5,7 +5,7 @@
 [2DC DR Playbook](./2DC/playbook.adoc)
 
 ## How to update DR Playbook
-1. If you need to update the recovery steps for a particular scenario, say "N1" for example, open the asciidoc file `2DC/scenarios/N1/runbook.adoc`.
+1. If you need to update the recovery steps for a particular scenario, say `N1` for example, open the asciidoc file `2DC/scenarios/N1/runbook.adoc`.
 2. Update the sections `Failover steps to degraded state` and `Recovery steps to normal state`
 You can include reusable steps that can be found in `steps/.`.
 For example:
