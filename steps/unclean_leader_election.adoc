@@ -1,10 +1,6 @@
-
 It is possible to perform an unclean leader election at at topic-level with: 
-
 [source,shell]
 ----
 ./bin/kafka-leader-election --${BOOTSTRAP_SERVER:PORT} --topic ${TOPIC} --partition ${PARITION_NUMBER} --election-type UNCLEAN
 ----
-
-
 CAUTION: To limit as much data loss as possible, it is highly advised to not run the above command with `--all-topic-partitions`. 

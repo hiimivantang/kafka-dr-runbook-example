@@ -1,8 +1,14 @@
-Run the following command to update the `min.insync.replicas` for all topics:
-
+To update the `min.insync.replicas` for affeected topic(s), run the following command:
 [source,shell]
 ----
-kafka-topics --bootstrap-server <hostname>:<port> --list | \
+kafka-configs --bootstrap-server <HOSTNAME>:<PORT> --alter \
+--add-config 'min.insync.replicas=<YOUR_DESIRED_MIR_COUNT>' --entity-type topics --entity-name <TOPIC_NAME>
+----
+If you need to update the `min.insync.replicas` for all topics instead, run the following command:
+[source,shell]
+----
+kafka-topics --bootstrap-server <HOSTNAME>:<PORT> --list | \
 xargs -L1 kafka-configs --bootstrap-server <hostname>:<port> --alter \
 --add-config 'min.insync.replicas=<YOUR_DESIRED_MIR_COUNT>' --entity-type topics --entity-name
 ----
+NOTE: When your topic's insync replica (ISR) count is less than the configured `min.insync.replicas`, you will encounter a `NotEnoughReplicasException` in the producer's log.

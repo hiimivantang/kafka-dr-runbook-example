@@ -12,16 +12,39 @@
 
 === Failover steps to degraded state
 
-////
-This section articulates the action required to failover affected components, if any.
-
-TODO: Update the explicit steps, complete with commands or relevant references, to successfully failover and resume business operations 
-////
+. Ensure there are no offline partitions, i.e. partitions whose leader is not available.
++
+====
+include::../../../steps/ensure_no_offline_partitions.adoc[]
+====
+. If there are offline partitions and availability of data requires prioritization over other factors, then trigger unclean election with care.
++
+====
+include::../../../steps/unclean_leader_election.adoc[]
+====
+. If your producers are blocked because the topic partition(s) you are trying to produce to is not sufficiently replicated to match the configured topics' `min.insync.replicas`, you can unblock it by altering the topic(s) settings. 
++
+====
+include::../../../steps/update_mir_in_bulk.adoc[]
+====
 
 === Recovery steps to normal state
 
-////
-This section articulates the action required to recover and/or failback, i.e. recovery back to normal state when outage is resolved.
-
-TODO: Update the explicit steps, complete with commands or relevant references, to successfully failback and recover back to normal state of operation.
-////
+. Reset/replace offline node.
+. Start Kafka service.
++
+====
+include::../../../steps/start_broker.adoc[]
+====
+. Ensure there are no under replicated partitions.
++
+====
+include::../../../steps/ensure_no_urp.adoc[]
+====
++
+NOTE: It may take a while before all replicas are caught up.
+. Restore `min.insync.replicas` back to your desired value, e.g. MIR=4 if you require guarantee that every event produced to both DCs.
++
+====
+include::../../../steps/update_mir_in_bulk.adoc[]
+====

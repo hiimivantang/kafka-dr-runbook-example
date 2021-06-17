@@ -24,3 +24,10 @@ include::scenarios/N2/runbook.adoc[]
 
 include::scenarios/N3/runbook.adoc[]
 
+include::scenarios/US1/runbook.adoc[]
+
+include::scenarios/DS1/runbook.adoc[]
+
+include::scenarios/Q1/runbook.adoc[]
+
+include::scenarios/CW1/runbook.adoc[]
