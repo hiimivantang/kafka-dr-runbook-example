@@ -1,12 +1,9 @@
 If your Zookeeper node is running as a service (found under /lib/systemd/system/) from a recent Confluent Platform release, you can restart it using:
-
 [source,shell]
 ----
 systemctl restart confluent-zookeeper
 ----
-
-Otherwise, you can restart your broker using:
-
+Otherwise, you can restart your Zookeeper node using:
 [source,shell]
 ----
 bin/zookeeper-server-stop.sh

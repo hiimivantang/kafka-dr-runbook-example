@@ -12,16 +12,26 @@
 
 === Failover steps to degraded state
 
-////
-This section articulates the action required to failover affected components, if any.
-
-TODO: Update the explicit steps, complete with commands or relevant references, to successfully failover and resume business operations 
-////
+. Check if your Zookeeper's hierarchical quorum is offline.
++
+====
+include::../../../steps/ensure_quorum.adoc[]
+====
+. If your Zookeeper quorum is offline, switch over from hierarchical quorum to normal quorum.
++
+====
+include::../../../steps/switch_to_normal_quorum.adoc[]
+====
 
 === Recovery steps to normal state
-
-////
-This section articulates the action required to recover and/or failback, i.e. recovery back to normal state when outage is resolved.
-
-TODO: Update the explicit steps, complete with commands or relevant references, to successfully failback and recover back to normal state of operation.
-////
+. Reset/replace offline nodes.
+. Perform failback for Zookeeper nodes that were switched from Zookeeper hierarchical quorum to normal quorum.
++
+====
+include::../../../steps/switch_to_hierarchical_quorum.adoc[]
+====
+. Check if your Zookeeper's hierarhical quorum is online.
++
+====
+include::../../../steps/ensure_quorum.adoc[]
+====

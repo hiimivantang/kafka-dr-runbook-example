@@ -1,0 +1,10 @@
+To determine if you have a Zookeeper quorum, run the following and ensure there is a leader.
+
+[source,shell]
+----
+#Include all your Zookeeper nodes
+for x in ${ZK1_HOSTNAME} ${ZK2_HOSTNAME} ${ZK3_HOSTNAME} ${ZK4_HOSTNAME} ${ZK5_HOSTNAME} ${ZK6_HOSTNAME}; \
+do echo $x; echo srvr|nc $x 2181|grep Mode; \
+echo; \
+done
+----

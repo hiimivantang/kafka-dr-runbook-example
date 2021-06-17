@@ -1,16 +1,12 @@
-:source-highlighter: highlight.js
-:highlightjs-theme: idea
+You can switch over from a https://zookeeper.apache.org/doc/r3.2.2/zookeeperHierarchicalQuorums.html[Zookeeper hierarchical quorum] to a normal quorum by performing the following for each of the Zookeeper nodes in a rolling fashion:
 
-You can switch over to https://zookeeper.apache.org/doc/r3.2.2/zookeeperHierarchicalQuorums.html[Zookeeper hierarchical quorum] by updating `zookeeper.properties` for each zookeeper node and restarting Zookeeper service.
-
-See following snippet of `zookeeper.properties` containing configuration for a hierarchical quorum with 3+3 Zookeeper nodes across two DCs.
-
+.. Make the following changes to your `zookeeper.properties` file:
++
 [source,shell]
 ----
 
-
 ########################################
-# Comment the servers affected by outage
+# Comment the group affected by outage
 ########################################
 #server.1=<ZK1_HOSTNAME>:2888:3888
 #server.2=<ZK2_HOSTNAME>:2888:3888
@@ -33,5 +29,6 @@ server.6=<ZK6_HOSTNAME>:2888:3888
 #weight.5=1
 #weight.6=1
 ----
-
+.. Then, restart Zookeeper service:
++
 include::restart_zookeeper.adoc[]
