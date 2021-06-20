@@ -31,12 +31,12 @@ zookeeper:
       group.2: '4:5:6'
 
       #FIXME: REPLACE WITH YOUR ZK HOSTNAMES
-      server.1: ip-10-0-0-196.ap-southeast-1.compute.internal:2888:3888
-      server.2: ip-10-0-0-238.ap-southeast-1.compute.internal:2888:3888
-      server.3: ip-10-0-0-233.ap-southeast-1.compute.internal:2888:3888
-      server.4: ip-10-0-0-35.ap-southeast-1.compute.internal:2888:3888
-      server.5: ip-10-0-0-17.ap-southeast-1.compute.internal:2888:3888
-      server.6: ip-10-0-0-15.ap-southeast-1.compute.internal:2888:3888
+      server.1: ip-10-0-0-103.ap-southeast-1.compute.internal:2888:3888
+      server.2: ip-10-0-0-79.ap-southeast-1.compute.internal:2888:3888
+      server.3: ip-10-0-0-102.ap-southeast-1.compute.internal:2888:3888
+      server.4: ip-10-0-0-111.ap-southeast-1.compute.internal:2888:3888
+      server.5: ip-10-0-0-119.ap-southeast-1.compute.internal:2888:3888
+      server.6: ip-10-0-0-82.ap-southeast-1.compute.internal:2888:3888
       weight.1: 1
       weight.2: 1
       weight.3: 1
@@ -47,13 +47,12 @@ zookeeper:
       clientPort: 2181
   hosts:
     #FIXME: REPLACE WITH YOUR ZK HOSTNAMES
-    ip-10-0-0-196.ap-southeast-1.compute.internal:
-    ip-10-0-0-238.ap-southeast-1.compute.internal:
-    ip-10-0-0-233.ap-southeast-1.compute.internal:
-    ip-10-0-0-35.ap-southeast-1.compute.internal:
-    ip-10-0-0-17.ap-southeast-1.compute.internal:
-    ip-10-0-0-15.ap-southeast-1.compute.internal:
-    
+    ip-10-0-0-103.ap-southeast-1.compute.internal:
+    ip-10-0-0-79.ap-southeast-1.compute.internal:
+    ip-10-0-0-102.ap-southeast-1.compute.internal:
+    ip-10-0-0-111.ap-southeast-1.compute.internal:
+    ip-10-0-0-119.ap-southeast-1.compute.internal:
+    ip-10-0-0-82.ap-southeast-1.compute.internal:
 
 #################################
 #  3+3 Stretched Kafka cluster  #
@@ -97,68 +96,68 @@ kafka_broker:
       confluent.tier.metadata.replication: 6 # FIXME: Required if you intend to use tier storage in the future.
 
       #TODO: INSERT OTHER ADDITIONAL BROKER PROPERTIES IF REQUIRED.
-      
+
 
   hosts:
     #FIXME: REPLACE WITH BROKER 1 HOSTNAME
-    ip-10-0-0-218.ap-southeast-1.compute.internal:
+    ip-10-0-0-123.ap-southeast-1.compute.internal:
       kafka_broker_custom_properties:
         broker.rack: 'DC1'
         broker.id: 1
       kafka_broker_custom_listeners:
         client_listener:
             #FIXME: INSERT BROKER 1 PUBLICLY ACCESSIBLE HOSTNAME, IF REQUIRED
-            hostname:
+            hostname: ec2-54-179-106-8.ap-southeast-1.compute.amazonaws.com
 
     #FIXME: REPLACE WITH BROKER 2 HOSTNAME
-    ip-10-0-0-199.ap-southeast-1.compute.internal: 
+    ip-10-0-0-90.ap-southeast-1.compute.internal: 
       kafka_broker_custom_properties:
         broker.rack: 'DC1'
         broker.id: 2
       kafka_broker_custom_listeners:
         client_listener:
             #FIXME: INSERT BROKER 2 PUBLICLY ACCESSIBLE HOSTNAME, IF REQUIRED
-            hostname:
+            hostname: ec2-18-141-145-177.ap-southeast-1.compute.amazonaws.com
 
     #FIXME: REPLACE WITH BROKER 3 HOSTNAME
-    ip-10-0-0-221.ap-southeast-1.compute.internal:
+    ip-10-0-0-68.ap-southeast-1.compute.internal:
       kafka_broker_custom_properties:
         broker.rack: 'DC1'
         broker.id: 3
       kafka_broker_custom_listeners:
         client_listener:
             #FIXME: INSERT BROKER 3 PUBLICLY ACCESSIBLE HOSTNAME, IF REQUIRED
-            hostname:
+            hostname: ec2-3-1-203-33.ap-southeast-1.compute.amazonaws.com
 
     #FIXME: REPLACE WITH BROKER 4 HOSTNAME
-    ip-10-0-0-34.ap-southeast-1.compute.internal:
+    ip-10-0-0-98.ap-southeast-1.compute.internal:
       kafka_broker_custom_properties:
         broker.rack: 'DC2'
         broker.id: 4
       kafka_broker_custom_listeners:
         client_listener:
             #FIXME: INSERT BROKER 4 PUBLICLY ACCESSIBLE HOSTNAME, IF REQUIRED
-            hostname:
+            hostname: ec2-52-221-242-167.ap-southeast-1.compute.amazonaws.com
 
     #FIXME: REPLACE WITH BROKER 5 HOSTNAME
-    ip-10-0-0-55.ap-southeast-1.compute.internal:
+    ip-10-0-0-115.ap-southeast-1.compute.internal:
       kafka_broker_custom_properties:
         broker.rack: 'DC2'
         broker.id: 5
       kafka_broker_custom_listeners:
         client_listener:
             #FIXME: INSERT BROKER 5 PUBLICLY ACCESSIBLE HOSTNAME, IF REQUIRED
-            hostname:
+            hostname: ec2-52-77-254-82.ap-southeast-1.compute.amazonaws.com
 
     #FIXME: REPLACE WITH BROKER 6 HOSTNAME
-    ip-10-0-0-15.ap-southeast-1.compute.internal:
+    ip-10-0-0-107.ap-southeast-1.compute.internal:
       kafka_broker_custom_properties:
         broker.rack: 'DC2'
         broker.id: 6
       kafka_broker_custom_listeners:
         client_listener:
             #FIXME: INSERT BROKER 6 PUBLICLY ACCESSIBLE HOSTNAME, IF REQUIRED
-            hostname:
+            hostname: ec2-18-141-159-168.ap-southeast-1.compute.amazonaws.com
 
 control_center:
   vars:
@@ -167,4 +166,13 @@ control_center:
       confluent.license: 
 
   hosts:
-    ip-10-0-0-215.ap-southeast-1.compute.internal:
+    ip-10-0-0-96.ap-southeast-1.compute.internal:
+    #ip-10-0-0-78.ap-southeast-1.compute.internal:
+
+schema_registry:
+  hosts:
+    ip-10-0-0-120.ap-southeast-1.compute.internal:
+
+kafka_connect:
+  hosts:
+    ip-10-0-0-89.ap-southeast-1.compute.internal:
