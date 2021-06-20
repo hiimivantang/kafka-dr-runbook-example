@@ -23,11 +23,11 @@ variable "broker-count" {
 }
 
 variable "connect-count" {
-  default = 0
+  default = 1
 }
 
 variable "schema-count" {
-  default = 0
+  default = 1
 }
 
 variable "rest-count" {
@@ -35,7 +35,7 @@ variable "rest-count" {
 }
 
 variable "c3-count" {
-  default = 1
+  default = 2
 }
 
 variable "ksql-count" {
